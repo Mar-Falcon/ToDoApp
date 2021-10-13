@@ -1,7 +1,5 @@
-import Contact from "./Contact";
-import { Login } from "./Login";
-import { Dashboard } from "./Dashboard/index";
-
-
-
-export { Contact, Login, Dashboard };
+export { Tasks } from "./Tasks";
+export { Login } from "./Login";
+export { Dashboard } from "./Dashboard";
+export { Users } from "./Users";
+export { SignUp } from "./SignUp";

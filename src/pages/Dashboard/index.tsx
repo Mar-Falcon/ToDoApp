@@ -1,10 +1,15 @@
-const Dashboard = () => {
+import { FC } from "react";
+import { Link } from "react-router-dom";
+import { Layout } from "../../components";
 
-	return(
-		<div> Tareas
+const Dashboard: FC = () => {
+  return (
+    <Layout>
+      <Link to="/users">Usuarios</Link>
+      Este es el contenido de Dashboard
+      Aqui van las TAREAS
+    </Layout>
+  );
+};
 
-
-		</div>
-	)
-}
 export { Dashboard };

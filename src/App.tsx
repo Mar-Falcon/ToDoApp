@@ -1,14 +1,21 @@
-import React from "react";
-import { Contact, Dashboard, Login } from "./pages/index";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
+import { Dashboard, Login, SignUp, Tasks, Users } from "./pages";
+
+const App = () => {    
+
   return (
-    <div className="App">
-      mi app
-      <Login />
-      <Dashboard />
-      <Contact />
-    </div>
+    <>
+      <BrowserRouter>       
+        <Switch>
+          <Route path="/signUp" component={SignUp}/> 
+          <Route path="/login" component={Login}/>
+          <Route path="/tasks" component={Tasks}/>
+          <Route path="/users" component={Users}/>
+          <Route path="/" component={Dashboard}/>        
+        </Switch>  
+      </BrowserRouter> 
+    </>   
   );
 }
 
