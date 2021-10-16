@@ -1,0 +1,10 @@
+@import "../../../assets/sass/index.scss";
+
+.header{	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: $primary-color;
+	background-color: $secondary-color;
+	padding: 20px;
+}

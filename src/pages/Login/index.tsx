@@ -1,24 +1,44 @@
-import { FormEvent } from "react";
+import { FC, FormEvent, useState } from "react";
 import { Layout } from "../../components";
+import { WithAuth } from "../../hoc";
+import { useAuth } from "../../hooks";
 
 
-const Login = () => {	
+const Login: FC = () => {	
+
+	const [email, setEmail] = useState("");
+	const [pass, setPass] = useState("");
+      
+	const { login, userSession } = useAuth();
+      
 	
-	const handleSubmit = (e: FormEvent) =>{
+	const handleSubmit = async (e: FormEvent) =>{
 		e.preventDefault();
-		console.log("Reaccionó al Evento de formulario")
-	}
+		try {
+			await login(email, pass);
+		      } catch (err) {
+			console.log(err);
+		      }
+		    };
+		  
+		    // useEffect(() => {
+		    //   localStorage.setItem("user", JSON.stringify(userSession));
+		    // }, [userSession]);
+		  
+		    if (userSession) {
+		      localStorage.setItem("user", JSON.stringify(userSession));
+		    }
 
 	return (
-		<Layout hideHeader>	        
+		<Layout mainClass="login" hideHeader hideFooter>	        
 			<form onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor="email">Email</label>
-					<input id="email" type="text" name="email" />
+					<input id="email" type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 				</div>
 				<div>
-					<label htmlFor="password">Contraseña</label>
-					<input id="password" type="text" name="pass" />
+					<label htmlFor="pass">Contraseña</label>
+					<input id="pass" type="password" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} />
 				</div>
 				<button type="submit">Enviar</button>
 			</form>
@@ -26,4 +46,4 @@ const Login = () => {
 	)
 }
     
-export { Login }
+export const LoginPage = WithAuth(Login);

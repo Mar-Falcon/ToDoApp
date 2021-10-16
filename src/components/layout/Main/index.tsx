@@ -1,9 +1,15 @@
 import { FC } from "react";
+import "./style.scss";
 
-const Main: FC = ({ children }) => {
+type Props = {
+  id?: string;
+  className?: string;
+};
+
+const Main: FC<Props> = ({ children, id }) => {
   return (
     <>
-      <main>{children}</main>
+      <main id={id} className="main">{children}</main>
     </>
   );
 };

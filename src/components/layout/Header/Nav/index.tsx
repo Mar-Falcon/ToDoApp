@@ -19,6 +19,9 @@ const Nav: FC = () => {
 		    </li>
 		    <li>
 		    	<Link to="/login"> Login </Link>  			
+		    </li>
+		    <li>
+		    	<Link to="/task"> Crear Tarea </Link>  			
 		    </li>		    
 		</ul>
 	    </nav>
