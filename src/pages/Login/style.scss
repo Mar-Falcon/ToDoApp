@@ -1,0 +1,22 @@
+.form-login{
+	width: 250px;
+	background-color: rgb(238, 236, 236);
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: flex-start;
+    	text-align: center;
+   	padding: 10px;
+    	box-shadow: 0 0 29px 0 rgb(104, 103, 103);    
+}
+.input-login{
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 90%;
+	margin: 10px;	
+}
+.button-login{	
+	width: 20%;
+	margin: 10px;	
+}

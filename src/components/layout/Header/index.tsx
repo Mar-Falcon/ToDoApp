@@ -5,7 +5,7 @@ import { Nav } from "./Nav";
 const Header: FC = () => {
 	return (
 	  <header className="header">
-		<div>To Do App</div>
+		<h1>To Do App</h1>
 	    	<Nav></Nav>
 	  </header>
 	);

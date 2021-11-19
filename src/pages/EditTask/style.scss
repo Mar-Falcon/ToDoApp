@@ -1,13 +1,11 @@
 @import "../../assets/sass/index.scss";
 
-.control{
+form{
 	background-color: rgb(238, 236, 236);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;	
-	padding: 10px;	
-	width: 450px;
-	form{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;			
+		width: 450px;
 		padding: 10px;
 		div{			
 			display: flex;
@@ -17,7 +15,7 @@
 			
 		}
 	}	
-}
+
 .boton{
 	background-color: $fifth-color;
 	color: antiquewhite;
@@ -25,6 +23,3 @@
 	margin: 20px 40px;
 	padding: 5px 10px;
 }
-
-
-

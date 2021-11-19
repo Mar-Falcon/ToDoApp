@@ -5,4 +5,13 @@ export type User = {
 	pass: string | null;
 };
 
-export type Task = {};
+export type Task = {
+	id?: string;
+	title: string;
+	description: string;
+	state: string;  
+	startDate: string;
+	endDate: string;
+};
+
+

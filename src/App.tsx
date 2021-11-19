@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { Control, Dashboard, Login, SignUp, Users } from "./pages";
+import { Control, Dashboard, EditTask, Login, SignUp, Users } from "./pages";
 
 
 const App = () => {    
@@ -12,7 +12,7 @@ const App = () => {
           <Route path="/signUp" component={SignUp}/> 
           <Route path="/login" component={Login}/>
           <Route path="/recovery-password" component={SignUp}/>
-
+          <Route path="/editTask" component={EditTask}/>
           <Route path="/task" component={Control}/>
           <Route path="/users" component={Users}/>
           <Route path="/" component={Dashboard}/>        

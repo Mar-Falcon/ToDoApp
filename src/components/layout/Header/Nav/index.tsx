@@ -9,7 +9,7 @@ const Nav: FC = () => {
 	    <nav className="nav-primary">		
 		<ul>
 		    <li>
-			<Link to="/"> Tablero </Link>			
+			<Link to="/" className="text-link"> Tablero </Link>			
 		    </li>
 		    <li>
 		    	<Link to="/signUp"> Registros </Link>			
@@ -19,10 +19,7 @@ const Nav: FC = () => {
 		    </li>
 		    <li>
 		    	<Link to="/login"> Login </Link>  			
-		    </li>
-		    <li>
-		    	<Link to="/task"> Crear Tarea </Link>  			
-		    </li>		    
+		    </li>		        
 		</ul>
 	    </nav>
 	    
